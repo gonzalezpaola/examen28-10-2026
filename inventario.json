@@ -1,0 +1,20 @@
+{
+  "campus": "Campus Norte",
+  "vlan_admin": 40,
+  "vlans": [
+    {"id": 10, "nombre": "Docentes", "uso": "Equipos del personal docente"},
+    {"id": 20, "nombre": "Alumnos", "uso": "Red de laboratorios y aulas"},
+    {"id": 40, "nombre": "Gestión", "uso": "Administración de equipos de red"}
+  ],
+  "dispositivos": [
+    {"hostname": "rtr-norte", "ip": "10.0.40.1", "tipo": "router", "vlan_id": 40},
+    {"hostname": "sw-core", "ip": "10.0.40.2", "tipo": "switch", "vlan_id": 40},
+    {"hostname": "srv-dhcp", "ip": "10.0.10.5", "tipo": "servidor", "vlan_id": 10},
+    {"hostname": "ap-lab1", "ip": "10.0.20.10", "tipo": "access-point", "vlan_id": 20}
+  ],
+  "protocolos": [
+    {"nombre": "SSH", "puerto": 22, "transporte": "TCP", "vlan_id": 40},
+    {"nombre": "DNS", "puerto": 53, "transporte": "UDP", "vlan_id": 10},
+    {"nombre": "HTTPS", "puerto": 443, "transporte": "TCP", "vlan_id": 20}
+  ]
+}
